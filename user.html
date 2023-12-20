@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="style.css">
+    <title>Online Admission Management System</title>
+    <style>
+        /* Add box shadow to the form */
+        .login-form {
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          padding: 20px; /* Add some padding for better visual */
+        }
+        a{
+            text-decoration: none;
+        }  
+         .footer {
+            background-color: #343a40; /* Dark background color */
+            color: white; /* Text color */
+            padding: 8px; /* Padding for content */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+      </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <p>College Admission Management System | User Login</p>
+          </a>
+        </div>
+      </nav>
+    </header >
+    <i class="fa fa-times-circle close-icon mt-5" onclick="redirectToIndex()"></i>
+
+    <div class="container mt-3 mb-5">
+      <div class="row justify-content-center">
+        <div class="col-md-4   login-form">
+          <h2 class="mb-4 text-center fs-0.1">User Login or Register</h2>
+          <!-- Your login/register form goes here -->
+          <form method="post" action="user_process.php">
+            <div class="mb-3">
+              <label for="username" class="form-label fw-bold">Username</label>
+              <input type="text" class="form-control " id="username" name="username" placeholder="username"  required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label fw-bold">Password</label>
+              <input type="password" class="form-control" id="password" name="password" placeholder="username"  required>
+            </div>
+            <div class="mb-4 mt-4  text-center">
+              <!-- <a class="btn btn-warning me-2" style="padding: 10px 50px;" name="login">Login</a> -->
+              <button type="submit" class="btn btn-warning me-2" name="login" style="padding: 10px 50px;">Login</button>
+           <a href="Register.html" class="btn btn-success ms-2" style="padding: 10px 50px;" name="register">Register</a>
+
+           <div class="mt-4 mb-2 text-start">
+            <a href="" >Forgot password?</a>
+            <a href="javascript:void(0);" class="d-flex mt-2" onclick="redirectToIndex()">Back To Home</a>
+           </div>
+         
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Footer section -->
+    <section class="footer">
+      <div class="container text-center">
+          <p>&copy; 2023 Online Admission Management System. All rights reserved.</p>
+      </div>
+  </section>
+    <!-- js for close icon -->
+    <script>
+      function redirectToIndex() {
+        window.location.href = 'index.html';
+      }
+    </script>
+
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
